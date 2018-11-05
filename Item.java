@@ -22,7 +22,4 @@ public interface Item {
 
   int getSerialNumber();
 
-  enum ItemType {
-    Type, Audio, Visual, AudioMobile, VisualMobile, Code, AU, VI, AM, VM
-  }
 }
