@@ -1,7 +1,9 @@
 /*
 Tomas Vergara
-September 29, 2018
-Main.java just includes a class and two of its objects in order to test Item.java and Product.java
+November 5, 2018
+Main.java creates object of CollectionTest, withing that creates objects of AudioPlayer and
+MoviePlayer. Within MoviePlayer creates objects of Screen.
+Uses CollectionTest object to print description of objects made.
  */
 
 import java.util.ArrayList;
@@ -41,9 +43,12 @@ public class Main {
 
     // Step 16
     //System.out.println("\nSTEP 16");
+
+    // Creates object of CollectionTest, throws in objects of AudioPlayer and MoviePlayer
     CollectionTest collectionTest = new CollectionTest(
         new AudioPlayer("iPod Mini", "MP3"),
         new AudioPlayer("Walkman", "WAV "),
+        // MoviePlayer needs a Screen argument, so we make an object of Screen here too
         new MoviePlayer("DBPOWER MK101",
             new Screen(" 720x480", 40, 22), MonitorType.LCD),
         new MoviePlayer("Pyle PDV156BK",
@@ -57,7 +62,8 @@ public class Main {
 class TestClass extends Product { // test class that derives from abstract
 
   public TestClass(String name) {
-    super(name); // this is only field you can set, rest are automatically made
+    // Calls parent constructor
+    super(name);
     // manufacturer is already set, so is serial number, and date. You only get to choose the name
   }
 }
