@@ -3,6 +3,7 @@ Tomas Vergara
 November 5, 2018
 Sets and returns important information about the screen.
  */
+
 public class Screen implements ScreenSpec {
 
   String resolution;
@@ -22,7 +23,8 @@ public class Screen implements ScreenSpec {
   }
 
   // Returns description of Screen
-  public String toString() { // creates formatted description of object (product) created
+  // creates formatted description of object (product) created
+  public String toString() {
     return "\nResolution : " + getResolution() + "\nRefresh Rate : " + getRefreshRate() +
         "\nResponse Time : " + getResponseTime();
   }

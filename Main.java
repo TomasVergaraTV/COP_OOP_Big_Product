@@ -6,11 +6,18 @@ MoviePlayer. Within MoviePlayer creates objects of Screen.
 Uses CollectionTest object to print description of objects made.
  */
 
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class Main {
 
@@ -54,6 +61,34 @@ public class Main {
         new MoviePlayer("Pyle PDV156BK",
             new Screen("1366x768", 40, 22), MonitorType.LED));
     collectionTest.printStuff(collectionTest.createSortArrayList());
+
+    EmployeeInfo empInfoObj = new EmployeeInfo();
+
+    // Creates text file with CollectionTest ArrayList and EmployeeInfo
+    ProcessFiles processFilesObj = new ProcessFiles();
+
+    try {
+      processFilesObj.WriteFile(collectionTest.createSortArrayList());
+      processFilesObj.WriteFile(empInfoObj);
+    } catch (Exception e) {
+      System.out.println("Oopsies we messed up!");
+    }
+
+    // STEP 22 ------------------------------------------------------------------------------------
+
+    File textFile = new File("C:\\Users\\T Vergara\\Documents\\FGCU\\Fall 2018\\COP\\"
+        + "OOP Release Candidate Test Folder\\LineTests\\TestResults.txt");
+    try {
+      Scanner scanner = new Scanner(textFile);
+      // Reads in text file line by line
+      System.out.println("\nReading out text file:");
+      while (scanner.hasNextLine()) {
+        System.out.println(scanner.nextLine());
+      }
+    }
+    catch (FileNotFoundException e) {
+      System.out.println("Oopsies! We couldn't find that file :( \nPlease try another one");
+    }
 
 
   }

@@ -5,6 +5,7 @@ Extension of Product class.
 Allows users to pause, resume, skip, and rewind as specified by the implemented interface.
 Returns description of itself.
  */
+
 public class MoviePlayer extends Product implements MultiMediaControl {
 
   Screen screen;
@@ -27,7 +28,7 @@ public class MoviePlayer extends Product implements MultiMediaControl {
   }
 
   // returns description of MoviePlayer. Calls description of parent class and Screen class
-  public String toString() {
+  public String toStrings() {
     return super.toString() + screen.toString() + "\nMonitor Type : " + monitorType;
   }
 

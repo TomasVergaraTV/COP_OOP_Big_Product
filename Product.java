@@ -44,7 +44,7 @@ public abstract class Product implements Item, Comparable<Product> {
 
   // creates formatted description of object (product) created
   public String toString() {
-    return "Manufacturer : " + manufacturer + "\nSerial Number : " + getSerialNumber() +
+    return "\nManufacturer : " + manufacturer + "\nSerial Number : " + getSerialNumber() +
         "\nDate : " + getManufactureDate() + "\nName : " + getName();
   }
 

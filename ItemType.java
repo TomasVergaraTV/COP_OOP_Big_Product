@@ -3,6 +3,7 @@ Tomas Vergara
 November 5, 2018
 Creates list of constants
  */
+
 public enum ItemType {
   AUDIO("AU"), VISUAL("VI"), AUDIOMOBILE("AM"), VISUALMOBILE("VM");
 

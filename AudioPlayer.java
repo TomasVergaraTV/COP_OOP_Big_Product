@@ -4,6 +4,7 @@ November 5, 2018
 Makes different methods that an audioplayer should be expected to do. These methods were found in
 the MultiMediaControl interface
 */
+
 public class AudioPlayer extends Product implements MultiMediaControl {
 
   String audioSpecification;
@@ -26,7 +27,7 @@ public class AudioPlayer extends Product implements MultiMediaControl {
   }
 
   // Prints description of AudioPlayer
-  public String toString() {
+  public String toStrings() {
     return super.toString() + "\nAudio Spec : " + audioSpecification + "\nType : " + mediaType;
   }
 
